@@ -1,0 +1,11 @@
+.calculator {
+  width: 45vh;
+  height: 90vh;
+  background-color: #2f3035;
+  border-radius: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  border-width: 2px;
+  border-style: solid;
+  border-color: white;
+}
