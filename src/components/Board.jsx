@@ -68,10 +68,12 @@ const Board = ({ setResult, setOperation, setNumber, setNumber2, number, number2
         setResult(parseFloat(number) + parseFloat(number2));
       }
     } else if (dato.trim() === "⭮") {
-      if (number !== "") {
-        setNumber(number.toString().slice(0, -1));
-      } else if (number2 !== "") {
-        setNumber2(number2.toString().slice(0, -1));
+      if(number2 !== "") {
+        setNumber2((prev) => prev.slice(0, -1));
+      }else if (operation !== "") {
+        setOperation("");
+      }else if(number !== "") {
+        setNumber((prev) => prev.slice(0, -1));
       }
     } else if (dato.trim() === "•") {
       if(operation === "") {
