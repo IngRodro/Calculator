@@ -2,7 +2,7 @@ import React from "react";
 import Button from "./Button";
 import styles from "../css/Board.module.css";
 
-const Board = ({ setResult, setOperation, setNumber, setNumber2, number, number2, operation }) => {
+const Board = ({ setResult, setOperation, setNumber, setNumber2, number, number2, operation, result }) => {
   const datos = [
     { color: "g", dato: "AC" },
     { color: "g", dato: "+/-" },
@@ -29,7 +29,7 @@ const Board = ({ setResult, setOperation, setNumber, setNumber2, number, number2
   const handleClick = (e) => {
     const dato = e.target.textContent;
     if (dato.trim() === "AC") {
-      setResult(0);
+      setResult("");
       setOperation("");
       setNumber("");
       setNumber2("");
@@ -46,12 +46,32 @@ const Board = ({ setResult, setOperation, setNumber, setNumber2, number, number2
         setNumber2(number2.trim() / 100);
       }
     } else if (dato.trim() === "÷") {
+      if(result !== "") {
+        setNumber(result.toString());
+        setNumber2("");
+        setResult("");
+      }
       setOperation("÷");
     } else if (dato.trim() === "x") {
+      if(result !== "") {
+        setNumber(result.toString());
+        setNumber2("");
+        setResult("");
+      }
       setOperation("x");
     } else if (dato.trim() === "-") {
+      if(result !== "") {
+        setNumber(result.toString());
+        setNumber2("");
+        setResult("");
+      }
       setOperation("-");
     } else if (dato.trim() === "+") {
+      if(result !== "") {
+        setNumber(result.toString());
+        setNumber2("");
+        setResult("");
+      }
       setOperation("+");
     } else if (dato.trim() === "=") {
       if (operation === "÷") {
