@@ -103,9 +103,9 @@ const Board = ({ setResult, setOperation, setNumber, setNumber2, number, number2
       }
     } else {
       if (operation === "") {
-        setNumber((prev) => prev + dato.trim());
+        setNumber((prev) => prev.toString().length > 21 ? prev : prev + dato.trim());
       } else {
-        setNumber2((prev) => prev + dato.trim());
+        setNumber2((prev) => prev.toString().length > 21 ? prev : prev + dato.trim());
       }
     }
   };
