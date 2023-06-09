@@ -9,3 +9,21 @@
   border-style: solid;
   border-color: white;
 }
+
+.app-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-around;
+  background-color: #2f3035;
+}
+
+.canvas-container {
+  border-radius: 10px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
