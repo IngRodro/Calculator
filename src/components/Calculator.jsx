@@ -10,6 +10,8 @@ const Calculator = () => {
   const [number, setNumber] = React.useState("");
   const [number2, setNumber2] = React.useState("");
 
+  console.log(result)
+
   return (
     <div className={styles["app-container"]}>
       <div className={styles["canvas-container"]}>

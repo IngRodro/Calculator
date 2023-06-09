@@ -8,10 +8,10 @@ const Board = ({ setResult, setOperation, setNumber, setNumber2, number, number2
     { color: "g", dato: "⭮" },
     { color: "g", dato: "+/-" },
     { color: "g", dato: "%" },
-    { color: "r", dato: "÷" },
-    { color: "r", dato: "x" },
-    { color: "r", dato: "-" },
     { color: "r", dato: "+" },
+    { color: "r", dato: "-" },
+    { color: "r", dato: "x" },
+    { color: "r", dato: "÷" },
     { color: "w", dato: "•" },
     { color: "w", dato: "=" },
   ];

@@ -19,6 +19,7 @@ const Display = ({ result, operation, number, number2 }) => {
     if(num.toString().split(".")[1].length > 6) {
       return num.toFixed(6) + "..."
     }
+    return num;
   }
 
 
